@@ -47,24 +47,6 @@ http://localhost:3000
 |-------------------|------|
 | Web App (Next.js) | 3000 |
 
-## ADMIN CREDENTIALS
-
-Username: Yuki (case-sensitive)
-Password: 123456789. (period included)
-
-## Environment Configuration
-
-A sample environment file is included:
-
-.env.example
-
-Example variables:
-
-SESSION_SECRET=replace_with_a_long_random_secret  
-ADMIN_EMAIL=admin@example.com  
-RATE_LIMIT_WINDOW_MS=60000  
-RATE_LIMIT_MAX_ATTEMPTS=5  
-
 ## Features Implemented
 1. User authentication with session cookies
 2. Create, edit, delete posts
