@@ -10,6 +10,14 @@ export async function POST(request) {
 
         const { displayName, password } = body;
 
+        // Check required fields before rate limiting.
+        if (!displayName || !password) {
+            return Response.json(
+                { error: "Display name and password are required." },
+                { status: 400 }
+            );
+        }
+
         const allowed = checkRateLimit(
             `login:${displayName || email}`,
             5,

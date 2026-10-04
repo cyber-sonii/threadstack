@@ -22,6 +22,13 @@ export async function POST(request) {
 
     const user = await getCurrentUser();
 
+    if (!user) {
+        return Response.json(
+            { error: "You must be logged in to create a post." },
+            { status: 401 }
+        );
+    }
+
     const allowed = checkRateLimit(`post:${user.id}`, 10, 60 * 1000);
 
     if (!allowed) {
