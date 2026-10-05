@@ -27,7 +27,12 @@ export default async function ChannelsPage() {// This is a SERVER component (run
                 {user ? (
                     <CreateChannelForm />
                 ) : (
-                    <h3 className="text-xl text-gray-600">Log in to create a channel.</h3>
+                    <h3 className="text-xl text-gray-600">
+                        <Link href="/login" className="text-blue-600 underline" >
+                            Login
+                        </Link>{" "} 
+                        to create a channel.
+                    </h3>
                 )}
             </div>
 

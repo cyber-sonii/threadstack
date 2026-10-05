@@ -72,7 +72,9 @@ export default async function ChannelsPage({ params }) {
                 {user ? (
                     <CreatePostForm channelId={channelId} />
                 ) : (
-                    <h3 className="text-xl text-gray-600">Log in to create a post.</h3>
+                    <h3 className="text-xl text-gray-600"><Link href="/login" className="text-blue-600 underline" >
+                            Login
+                        </Link>{" "} to create a post.</h3>
                 )}
             </div>
 
